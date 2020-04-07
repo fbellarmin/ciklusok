@@ -41,3 +41,17 @@ for (var rowCounter = 0; rowCounter < 6; rowCounter++) {
     blue += 15;
     positionY += size + padding;
 }
+
+var position = 120;
+var size = 100;
+var padding = 5;
+
+for (triangleCounter = 0; triangleCounter < 30; triangleCounter++) {
+    context.beginPath();
+    context.moveTo(position + triangleCounter * padding, position + triangleCounter * padding);
+    context.lineTo(position + size + triangleCounter * padding, position + triangleCounter * padding);
+    context.lineTo(position + size / 2 + triangleCounter * padding, position - size + triangleCounter * padding);
+    context.lineTo(position + triangleCounter * padding, position + triangleCounter * padding);
+    context.strokeStyle = 'grey';
+    context.stroke();
+}
